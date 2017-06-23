@@ -50,6 +50,21 @@ c. Ridge Gourd -
 > Model Name
 * 3-layer Neural Network using Keras Library (tensorflow backend)
 * The network is made up of 3 layers:
+
 1. Input layer
-a. Takes input variables and converts them into input equation
-b. Parameters: no. of neurons (memory blocks) = 16, activation function = linear, weight initializers = normal distribution, 
+- Takes input variables and converts them into input equation
+- Parameters: no. of neurons (memory blocks) = 16, activation function = linear, weight initializer = normal distribution, kernel and activity regularizer = L1 (alpha = 0.1)
+
+2. Hidden Layer
+- The processing (optimization) takes place in this layer.
+- Parameters: no. of neurons = 8, activation function = linear, weight initializer = normal distribution, kernel and activity regularizer = L1 (alpha = 0.1)
+
+3. Output Layer
+- Converts the processed results into a reverse scaled output.
+
+> Model Performance
+1. Cucumber (Indian)
+
+2. Carrot (local)
+
+3. Ridge Gourd
