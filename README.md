@@ -1,5 +1,7 @@
 # Food-amenities-demand-prediction
-Predicting the demand of food amenities using LSTM and 3-layer neural network.
+* Predicting the demand of food amenities using LSTM and 3-layer neural network.
+* To run the given codes, install Keras withn tensorflow backend in your system.
+* The .py file is a looping code, while the .ipynb is a test code.
 
 ***Business Problem***
 * Predicting the demand qunatity of food amenities
@@ -24,6 +26,23 @@ Predicting the demand of food amenities using LSTM and 3-layer neural network.
 > Summary Statistics
 * Summary Stats for Cucumber (Indian)
 
+![input_var_summ](https://user-images.githubusercontent.com/26039458/27529278-758c9838-5a71-11e7-836e-73e87002a99e.png)
+
+![ouput_var_summ](https://user-images.githubusercontent.com/26039458/27529276-758ba162-5a71-11e7-8017-f8dc513c4e71.png)
+
+* Summary Stats on Carrot (local)
+
+![sums_inp_carr](https://user-images.githubusercontent.com/26039458/27531850-bad1a762-5a7b-11e7-9508-f3e227b3acd1.png)
+
+![sums_out_carr](https://user-images.githubusercontent.com/26039458/27531852-bad347a2-5a7b-11e7-85e6-10ff77aa753b.png)
+
+* Summary Stats on Ridge Gourd
+
+![ridge_inp_summ](https://user-images.githubusercontent.com/26039458/27532825-16325176-5a7f-11e7-8076-102564db7fe5.png)
+
+![ridge_out_sums](https://user-images.githubusercontent.com/26039458/27532823-16322d68-5a7f-11e7-9251-077ce279d933.png)
+
+
 > Training and Test Datasets
 * The last week of the complete dataset is considered for testing while the rest of the dataset is considered for training
 
@@ -33,16 +52,35 @@ Predicting the demand of food amenities using LSTM and 3-layer neural network.
 2. Long Short-Term Memory (Recurrent Neural Network) method is used for forecasting. The forecasting problem is now considered as a supervised learning problem where the input is the value prior to the target day.
 3. LSTM is a special type of Neural Network which remembers information across long sequences to facilitate the forecasting.
 4. Forecasting results
-a. Cucumber (Indian) - 
-b. Carrot (local)
-c. Ridge Gourd - 
+* Cucumber (Indian) - rmse = Rs. 1.266
+
+![avgsp_pred_cucum](https://user-images.githubusercontent.com/26039458/27529407-081dae9e-5a72-11e7-8af3-3f42b35da27c.png)
+
+* Carrot (local) - rmse = Rs. 1.9
+
+![avgsp_pred_carr](https://user-images.githubusercontent.com/26039458/27531797-90d7c9f0-5a7b-11e7-822a-248668a02bc9.png)
+
+
+* Ridge Gourd - rmse = Rs. 1.5
+
+![ridge_avgsp](https://user-images.githubusercontent.com/26039458/27532820-15f5a92e-5a7f-11e7-8697-e998fb7f400e.png)
+
 
 * CustomerCount
 1. @CustomerCount is predicted using the same method as @AvgSP
 2. Forecasting Results
-a. Cucumber (Indian) - 
-b. Carrot (local) - 
-c. Ridge Gourd - 
+* Cucumber (Indian) - 12 Customers
+
+![cc_pred_cucum](https://user-images.githubusercontent.com/26039458/27529275-75892996-5a71-11e7-876c-4e7c0d03e27a.png)
+
+* Carrot (local) - rmse = 50 Customers
+
+![cc_pred_carr](https://user-images.githubusercontent.com/26039458/27531847-bacc62d4-5a7b-11e7-81e9-d5c5317ee25c.png)
+
+
+* Ridge Gourd - rmse = 52 Customers
+
+![ridge_cc_pred](https://user-images.githubusercontent.com/26039458/27532821-162f4a30-5a7f-11e7-8f18-d04b4ce38fe5.png)
 
 * Onion Price is known with good accuracy due to information about the lot size.
 
@@ -63,8 +101,29 @@ c. Ridge Gourd -
 - Converts the processed results into a reverse scaled output.
 
 > Model Performance
-1. Cucumber (Indian)
+1. Cucumber (Indian) - rmse = 180 Kg
 
-2. Carrot (local)
+![training_fit_cucum](https://user-images.githubusercontent.com/26039458/27529273-7587a76a-5a71-11e7-89ae-9181ff37914c.png)
 
-3. Ridge Gourd
+![pred_cucum](https://user-images.githubusercontent.com/26039458/27529274-75890ace-5a71-11e7-822e-0bd70ec36ca1.png)
+
+![forecast_cucum](https://user-images.githubusercontent.com/26039458/27529277-758c7aec-5a71-11e7-85e6-89155fb6e46f.png)
+
+
+
+2. Carrot (local) - rmse = 250 Kg
+
+![train_dem_carr](https://user-images.githubusercontent.com/26039458/27531849-bad1b22a-5a7b-11e7-9d43-2318f459241a.png)
+
+![dem_pred_carr](https://user-images.githubusercontent.com/26039458/27531851-bad230ec-5a7b-11e7-84b4-1bbb30d613f9.png)
+
+![carr_dem_fore](https://user-images.githubusercontent.com/26039458/27531848-bacf5958-5a7b-11e7-940c-438f79285683.png)
+
+
+3. Ridge Gourd - rmse = 353 Kg
+
+![ridge_train_dem](https://user-images.githubusercontent.com/26039458/27532824-16324e1a-5a7f-11e7-8cd9-d461c1570a84.png)
+
+![ridge_dem_pred](https://user-images.githubusercontent.com/26039458/27532826-163a50e2-5a7f-11e7-90bf-68c92f7999a3.png)
+
+![ridge_dem_fore](https://user-images.githubusercontent.com/26039458/27532822-1630d7a6-5a7f-11e7-8cc1-cf2d10a6a6f4.png)
