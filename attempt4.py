@@ -507,8 +507,8 @@ for i in (43, 44, 45, 76, 124, 144, 769, 1835, 2108):
         date.append(i+index_of_today)
         
 
-pred = pd.DataFrame({'SkuId':skuid, 'SKUName':sku, 'actual_demand':ac_demand, 'predicted_demand':np.round(pre_demand), 'actual_customers':ac_cc, 'predicted customers':pre_cc})
-fore = pd.DataFrame({'SkuId':skuid, 'SKUName':sku, 'demand':forecasted_demand, 'customers':forecasted_cc, 'DeliveryDate':date})
+pred = pd.DataFrame({'SkuId':skuid, 'SKUName':sku, 'actual_demand':ac_demand, 'predicted_demand':np.round(pre_demand), 'actual_customers':ac_cc, 'predicted customers':np.round(pre_cc)})
+fore = pd.DataFrame({'SkuId':skuid, 'SKUName':sku, 'demand':np.round(forecasted_demand), 'customers':np.round(forecasted_cc), 'DeliveryDate':date})
 
 pred.to_csv('Performance_normal_SKUs.csv')
 fore.to_csv('Forecast_normal_SKUs.csv')
