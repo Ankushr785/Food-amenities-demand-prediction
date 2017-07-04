@@ -2,6 +2,7 @@
 * Predicting the demand of food amenities using LSTM and 3-layer neural network.
 * To run the given codes, install Keras withn tensorflow backend in your system.
 * The .py file is a looping code, while the .ipynb is a test code.
+* Note - The compiled results and graphs are based on the attempt4.py code, which is not automated for lag selection. The complete_code.py file contains automation for lag selection.
 
 ***Business Problem***
 * Predicting the demand qunatity of food amenities
