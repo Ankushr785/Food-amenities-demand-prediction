@@ -25,3 +25,10 @@
 10. Add the new feature forecast to further_forecast_iv dataframe.
 
 11. Bingo! New Feature added! To delete a feature, reverse this algorithm.
+
+#SQL data extraction
+
+1. Create a table in the asgard database named 'predict_table' that contains data acording to the extraction query.
+
+#For importing data with csv file, use
+data = pd.read_csv(filepath)
