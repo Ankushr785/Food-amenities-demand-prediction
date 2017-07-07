@@ -17,7 +17,7 @@ import MySQLdb as mdb
 
 connection = mdb.connect('88.99.213.227', 'ankush', '4vnSVp8pEk', 'asgard') 
 cursor = connection.cursor()
-data = pd.read_sql('select * from Sku limit 10;', connection)
+data = pd.read_sql('select * from predict_table;', connection)
 
 
 
