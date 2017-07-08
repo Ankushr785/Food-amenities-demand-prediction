@@ -15,7 +15,7 @@ from keras import regularizers
 import MySQLdb as mdb
 
 
-connection = mdb.connect('88.99.213.227', 'ankush', '4vnSVp8pEk', 'asgard') 
+connection = mdb.connect('88.99.213.227', <username>, <password>, 'asgard') 
 cursor = connection.cursor()
 data = pd.read_sql('select * from predict_table;', connection)
 
