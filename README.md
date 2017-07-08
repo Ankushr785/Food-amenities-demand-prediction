@@ -7,7 +7,6 @@
 ***Business Problem***
 * Predicting the demand qunatity of food amenities
 * No input is at disposal, hence the input variables need to be forecasted and then the target variable is regressed through the forecasted input variable
-* Stock Keeping Units (SKUs) under consideration - Cucumber (Indian), Carrot (local), Ridge Gourd 
 
 **Data Definition**
 > Data Variables and Definition
@@ -25,19 +24,19 @@
 * Only @CustomerCount and @ActualDemand are considered for outlier treatment
 
 > Summary Statistics
-* Summary Stats for Cucumber (Indian)
+* Summary Stats for SKU 1
 
 ![input_var_summ](https://user-images.githubusercontent.com/26039458/27529278-758c9838-5a71-11e7-836e-73e87002a99e.png)
 
 ![ouput_var_summ](https://user-images.githubusercontent.com/26039458/27529276-758ba162-5a71-11e7-8017-f8dc513c4e71.png)
 
-* Summary Stats on Carrot (local)
+* Summary Stats on SKU 2
 
 ![sums_inp_carr](https://user-images.githubusercontent.com/26039458/27531850-bad1a762-5a7b-11e7-9508-f3e227b3acd1.png)
 
 ![sums_out_carr](https://user-images.githubusercontent.com/26039458/27531852-bad347a2-5a7b-11e7-85e6-10ff77aa753b.png)
 
-* Summary Stats on Ridge Gourd
+* Summary Stats on SKU 3
 
 ![ridge_inp_summ](https://user-images.githubusercontent.com/26039458/27532825-16325176-5a7f-11e7-8076-102564db7fe5.png)
 
@@ -53,16 +52,16 @@
 2. Long Short-Term Memory (Recurrent Neural Network) method is used for forecasting. The forecasting problem is now considered as a supervised learning problem where the input is the value prior to the target day.
 3. LSTM is a special type of Neural Network which remembers information across long sequences to facilitate the forecasting.
 4. Forecasting results
-* Cucumber (Indian) - rmse = Rs. 1.266
+* SKU 1 - rmse = Rs. 1.266
 
 ![avgsp_pred_cucum](https://user-images.githubusercontent.com/26039458/27529407-081dae9e-5a72-11e7-8af3-3f42b35da27c.png)
 
-* Carrot (local) - rmse = Rs. 1.9
+* SKU 2 - rmse = Rs. 1.9
 
 ![avgsp_pred_carr](https://user-images.githubusercontent.com/26039458/27531797-90d7c9f0-5a7b-11e7-822a-248668a02bc9.png)
 
 
-* Ridge Gourd - rmse = Rs. 1.5
+* SKU 3 - rmse = Rs. 1.5
 
 ![ridge_avgsp](https://user-images.githubusercontent.com/26039458/27532820-15f5a92e-5a7f-11e7-8697-e998fb7f400e.png)
 
@@ -70,16 +69,16 @@
 * CustomerCount
 1. @CustomerCount is predicted using the same method as @AvgSP
 2. Forecasting Results
-* Cucumber (Indian) - 12 Customers
+* SKU 1 - 12 Customers
 
 ![cc_pred_cucum](https://user-images.githubusercontent.com/26039458/27529275-75892996-5a71-11e7-876c-4e7c0d03e27a.png)
 
-* Carrot (local) - rmse = 50 Customers
+* SKU 2 - rmse = 50 Customers
 
 ![cc_pred_carr](https://user-images.githubusercontent.com/26039458/27531847-bacc62d4-5a7b-11e7-81e9-d5c5317ee25c.png)
 
 
-* Ridge Gourd - rmse = 52 Customers
+* SKU 3 - rmse = 52 Customers
 
 ![ridge_cc_pred](https://user-images.githubusercontent.com/26039458/27532821-162f4a30-5a7f-11e7-8f18-d04b4ce38fe5.png)
 
@@ -102,7 +101,7 @@
 - Converts the processed results into a reverse scaled output.
 
 > Model Performance
-1. Cucumber (Indian) - rmse = 180 Kg
+1. SKU 1 - rmse = 180 Kg
 
 ![training_fit_cucum](https://user-images.githubusercontent.com/26039458/27529273-7587a76a-5a71-11e7-89ae-9181ff37914c.png)
 
@@ -112,7 +111,7 @@
 
 
 
-2. Carrot (local) - rmse = 250 Kg
+2. SKU 2 - rmse = 250 Kg
 
 ![train_dem_carr](https://user-images.githubusercontent.com/26039458/27531849-bad1b22a-5a7b-11e7-9d43-2318f459241a.png)
 
@@ -121,7 +120,7 @@
 ![carr_dem_fore](https://user-images.githubusercontent.com/26039458/27531848-bacf5958-5a7b-11e7-940c-438f79285683.png)
 
 
-3. Ridge Gourd - rmse = 353 Kg
+3. SKU 3 - rmse = 353 Kg
 
 ![ridge_train_dem](https://user-images.githubusercontent.com/26039458/27532824-16324e1a-5a7f-11e7-8cd9-d461c1570a84.png)
 
